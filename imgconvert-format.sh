@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#This script creates a new directory, converts the formats of all specified images within a the workdir and places
+#the converted images inside the newly created directory
+
 cd ~/Desktop/scripts #Change to the desired path
 
 convert_format(){

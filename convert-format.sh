@@ -34,4 +34,9 @@ done
 
 convert_format
 
+if [ $? -eq 0 ]; then
+	echo "The task was succesfully executed"
+else
+	echo "There was a problem with the execution"
+fi
 

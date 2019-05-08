@@ -1,4 +1,5 @@
 #This Script automates the creation of VM's on XenServer
+#It is currently under construction but works
 #!/bin/bash
 
 cd /var/opt/iso-images-storage

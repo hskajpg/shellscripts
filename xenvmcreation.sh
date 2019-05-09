@@ -41,14 +41,14 @@ create_vms(){
  vdi_uuid=$(xe vdi-create sr-uuid=$sr_uuid name-label=$vm_name virtual-size=35GiB)
  vbd_uuid=$(xe vbd-create vm-uuid=$vm_uuid vdi-uuid=$vdi_uuid device=xvda)
  xe vif-create vm-uuid=$vm_uuid network-uuid=$network_uuid device=0
- xe vm-cd-add uuid=$vm_uuid cd-name=$imagem device=1
+ xe vm-cd-add uuid=$vm_uuid cd-name=$image device=1
  #add cpu, memory, edit description 
  xe vm-memory-limits-set dynamic-max=2GiB dynamic-min=2GiB static-max=2GiB static-min=512MiB uuid=$vm_uuid
  xe vm-start uuid=$vm_uuid
  #xe vm-cd-eject vm=$vm_nome
 }
 
-if [ ! -f $imagem ]; then
+if [ ! -f $image ]; then
 	{ echo "File does not exist" && exit; }
 else
 	echo "File exists, continuing the process"

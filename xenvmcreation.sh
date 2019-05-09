@@ -52,7 +52,7 @@ if [ ! -f $imagem ]; then
 	{ echo "File does not exist" && exit; }
 else
 	echo "File exists, continuing the process"
-	cria_vms
+	create_vms
 fi
 
 if [ $? -eq 0 ]
